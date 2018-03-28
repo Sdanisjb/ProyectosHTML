@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+
+		<title>Carelibro UCSP</title>
+		<meta http-equiv="Content-Type" content="text/html"
+		charset="UTF-8">
+		<style>
+			
+			table, th, td {
+				border: 1px solid black;
+				border-collapse:collapse;
+			}
+			
+			th, td{
+				padding:15px;
+				text-align:center;
+			}	
+			
+			th {
+				background-color:black;
+				color:white;
+						
+			table{
+				border-spacing: 5px;
+			}
+			
+		</style>
+		<!--Jquery-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			alert("Bienvenido a la Red Social UCSP");
+		
+			$("#content").click(function(){
+				$("#div1").fadeToggle("fast");
+				$("#div2").fadeToggle("slow");
+				$("#div3").fadeToggle(3000);
+				$("#div4").fadeToggle(2000);				
+			});
+			 
+			$("#text").click(function(){
+				$("p").toggle();
+			});
+			$("#foto").click(function(){
+				$("#info").slideToggle("slow");
+			});
+			$("#agrandar").click(function(){
+				$("#horario").animate({					
+					height: '+=150px',
+					width: '+=150px'
+				});
+			});
+
+			$("#reducir").click(function(){
+				$("#horario").animate({					
+					height: '-=150px',
+					width: '-=150px'
+				});
+			});
+			
+			$("#foto").mouseenter(function(){
+				$("#foto").animate({					
+					height: '+=300px',
+					width: '+=300px',
+					align: 'center'
+				});
+			});
+			
+			$("#foto").mouseleave(function(){
+				$("#foto").animate({					
+					height: '-=300px',
+					width: '-=300px',
+					align: 'center'
+				});
+			});
+			$("#facebook").click(function(){
+				alert("Redireccionando a Facebook");
+			});
+			$("#facebook").mouseenter(function(){
+				$("#facebook").animate({
+					height: '+=50px',
+					width: '+=50px'
+				});
+			});
+			$("#facebook").mouseleave(function(){
+				$("#facebook").animate({
+					height: '-=50px',
+					width: '-=50px'
+				});
+			});
+			$("#twitter").click(function(){
+				alert("Redireccionando a Twitter");
+			});
+			$("#twitter").mouseenter(function(){
+				$("#twitter").animate({
+					height: '+=50px',
+					width: '+=50px'
+				});
+			});
+			$("#twitter").mouseenter(function(){
+				$("#twitter").animate({
+					height: '-=50px',
+					width: '-=50px'
+				});
+			});
+			$("#google").click(function(){
+				alert("Redireccionando a Google");
+			});
+			$("#google").mouseenter(function(){
+				$("#google").animate({
+					height: '+=50px',
+					width: '+=50px'
+				});
+			});
+			$("#google").mouseenter(function(){
+				$("#google").animate({
+					height: '-=50px',
+					width: '-=50px'
+				});
+			});
+			
+			
+			
+		});
+		</script>
+		
+	</head>
+
+	<body style="background-color:#989898">
+		<!--Primer Heading-->
+		<h1 style="border:5px solid black;
+		background-color:white;">Bienvenido a la Red Social UCSP</h1>
+		<hr>
+		<button type="button" id="content">Mostrar/Ocultar contenido</button>
+		
+		<!--Perfil del alumno-->
+		<div id="div1" style="display:none;">
+			<h2>Tu perfil</h2>
+			<img src="blanco.jpg" alt="Aquí va tu foto de perfil"
+			title="Foto de perfil" id="foto" style="width:150px; height:150px;"> 
+			<p>Haz click en tu foto de perfil para mostrar/ocultar tu información</p>
+			<div id="info" style="border:2px solid black;
+			background-color:powderblue;display:none;">
+				<h3>Cosas sobre ti</h3>
+				<ul>
+					<li><strong>Nombre:</strong> <small>Juan Pérez</small></li>
+					<li><strong>Carrera:</strong> <small>Ciencia de la Computación</small></li>
+					<li><strong>Semestre:</strong> <small>3</small></li>
+					<li><strong>Año de ingreso:</strong> <small>2017-01</small></li>			
+				</ul>
+			</div>
+			
+			<button type="button" id="text">Ocultar/mostrar texto</button>
+			
+		</div>
+		
+		
+		
+		<!--Nueva sección-->
+		<hr>
+		<div id="div2" style="display:none;">
+			<p>A través de esta plataforma puedes ver diferentes aspectos 
+			de tu vida universitaria</p>
+			<h2>Tu horario Universitario</h2>
+			<!--Horario-->
+			<button type="button" id="agrandar">Agrandar horario</button>
+			<button type="button" id="reducir">Reducir horario</button>
+			<table style="width:200px" id="horario">
+				<caption><strong>Horario Período 2018-01</strong></caption>
+				<tr>
+					<th>Hora</th>
+					<th>Lunes</th>
+					<th>Martes</th>
+					<th>Miércoles</th>
+					<th>Jueves</th>
+					<th>Viernes</th>
+					<th>Sabado</th>
+				</tr>
+				<!--Horarios con sus horas-->
+				<tr>
+					<th>7:00</th>
+					<td>Ciencia de la Computación II</td>
+					<td>-</td>
+					<td>Desarrollo Basado en Plataformas</td>
+					<td>Arquitectura de computadores</td>
+					<td>Cálculo I</td>
+					<td>-</td>					
+				</tr>
+				<tr>
+					<th>7:45</th>
+					<td>Ciencia de la Computación II</td>
+					<td>-</td>
+					<td>Desarrollo Basado en Plataformas</td>
+					<td>Arquitectura de computadores</td>
+					<td>Cálculo I</td>
+					<td>-</td>					
+				</tr>
+				<tr>
+					<th>8:30</th>
+					<td>-</td>
+					<td>Apreciación Literaria</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>Álgebra abstracta</td>					
+				</tr>
+				<tr>
+					<th>9:15</th>
+					<td>-</td>
+					<td>Apreciación Literaria</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>Álgebra abstracta</td>					
+				</tr>
+				<tr>
+					<th>10:00</th>
+					<td>Antropología</td>
+					<td>Apreciación Literaria</td>
+					<td>-</td>
+					<td>-</td>
+					<td>Álgebra Abstracta</td>
+					<td>-</td>					
+				</tr>
+				<tr>
+					<th>10:45</th>
+					<td>Antropología</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>Álgebra Abstracta</td>
+					<td>-</td>					
+				</tr>
+			</table>
+			
+		</div>
+		
+		<!--Lista de amigos-->
+		
+		<hr>
+		<div id="div3" style="display:none;">
+			<h3>Compañeros UCSP</h3>
+			<p>Aquí podrás encontrar a tus diferentes compañeros 
+			
+			
+			en 
+			las diferentes clases que llevas en este semestre</p>
+			
+		
+		</div>
+		<!--Agregar alert bienvenido ramirez y agregar links :v-->
+		<div id="div4" style="display:none;">
+			<a href="https://www.facebook.com/" target="_blank">
+				<img src="facebook.png" alt="Facebook" id="facebook"
+				 title="Facebook" style="width:50px;height:50px;">
+			</a>
+			<a href="https://www.google.com/" target="_blank"> 
+				<img src="google.png" alt="Google" id="google"
+				title="Google" style="width:50px;height:50px;">
+			</a>
+			<a href="https://www.twitter.com/" target="_blank">
+				<img src="twitter.jpg" alt="Twitter" id="twitter"
+				title="Twitter" style="width:50px;height:50px;">
+			</a>
+			
+		</div>
+	</body>
+</html>
